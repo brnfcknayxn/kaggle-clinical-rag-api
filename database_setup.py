@@ -36,5 +36,5 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=150, chunk_overlap=20)
 chunks = text_splitter.create_documents([clinical_trial_text])
 
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-vectordb = Chroma.from_documents(documents=chunks, embedding=embeddings, persist_directory="./chroma_db")
+vectordb = Chroma.from_documents(documents=chunks, embedding=embeddings, persist_directory="./chroma_db", collection_name="clinical_trials")
 print("VectorDB created successfully!")
