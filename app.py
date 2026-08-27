@@ -12,7 +12,7 @@ from sentence_transformers import CrossEncoder
 
 # Enter your Gemini API Key
 if not os.getenv("GOOGLE_API_KEY"):
-    os.environ["GOOGLE_API_KEY"] = "AQ.Ab8RN6LHzYT0KMI4QgvSowubULzY8tzacY23y2oKXeoDQPd2QA"
+    os.environ["GOOGLE_API_KEY"] = "enter google api here"
 
 app = FastAPI(title="Clinical Trial AI Evaluator")
 
