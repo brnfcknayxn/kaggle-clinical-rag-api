@@ -15,7 +15,7 @@ app = FastAPI(title="Clinical Trial AI Evaluator")
 
 # 2. Load Databases & Models (Ye static hain, inko koi key nahi chahiye)
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-vectordb = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
+vectordb = Chroma(persist_directory="./chroma_db", embedding_function=embeddings, collection_name="clinical_trials")
 reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
 
 # 3. Define Tools & Schemas
