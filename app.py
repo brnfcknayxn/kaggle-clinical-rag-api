@@ -58,7 +58,7 @@ def evaluate_patient_endpoint(request: EvaluationRequest):
             raise HTTPException(status_code=500, detail="Google API Key not found in environment variables.")
 
         # Initialize LLM right inside the request using the active API key
-        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.0, google_api_key=api_key)
+        llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", temperature=0.0, google_api_key=api_key)
         structured_llm = llm.with_structured_output(PatientEvaluation)
 
         prompt = ChatPromptTemplate.from_template("""
