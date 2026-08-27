@@ -11,7 +11,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from sentence_transformers import CrossEncoder
 
 # Enter your Gemini API Key
-os.environ["GOOGLE_API_KEY"] = "AQ.Ab8RN6LHzYT0KMI4QgvSowubULzY8tzacY23y2oKXeoDQPd2QA"
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 app = FastAPI(title="Clinical Trial AI Evaluator")
 
